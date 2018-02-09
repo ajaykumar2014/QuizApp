@@ -5,11 +5,11 @@ exports.AnswerSheet = [
     },
     {
         "id":2,
-        "answer":1
+        "answer":3
     },
     {
         "id":3,
-        "answer":1
+        "answer":3
     },
     {
         "id":4,
@@ -17,6 +17,26 @@ exports.AnswerSheet = [
     },
     {
         "id":5,
+        "answer":2
+    },
+    {
+        "id":6,
+        "answer":2
+    },
+    {
+        "id":7,
+        "answer":2
+    },
+    {
+        "id":8,
+        "answer":4
+    },
+    {
+        "id":9,
+        "answer":1
+    },
+    {
+        "id":10,
         "answer":1
     }
 ]

@@ -11,7 +11,6 @@ exports.getScore = function(req,res){
     userScore.correctAnswer = 0;
     for(var i=0;i<answerSheet.AnswerSheet.length;i++){
         for(var j=0;j<req.body.length;j++){
-            //console.log(answerSheet.AnswerSheet[i].id +"=="+ req.body[j].questionId+"&&"+answerSheet.AnswerSheet[i].answer +"=="+ req.body[j].anwerId)
             if(answerSheet.AnswerSheet[i].id == parseInt(req.body[j].questionId)
                  && answerSheet.AnswerSheet[i].answer == parseInt(req.body[j].anwerId)){
                 userScore.correctAnswer +=1;
@@ -19,25 +18,7 @@ exports.getScore = function(req,res){
             } 
         }
     }
-    //console.log("Correct Answer is "+JSON.stringify(userScore))
-    /*answerSheet.AnswerSheet.map((answerData)=>{
-        req.body.map((data,key)=>{
-            console.log(answerData.id +"==="+ data.questionId +"&&"+ answerData.answer +"==="+ data.anwerId)
-            if(answerData.id === data.questionId && answerData.answer === data.anwerId){
-                console.log(data.questionId +" is correct")
-                return;
-            }else{
-                console.log(data.questionId +" is incorrect")
-            }
-            //console.log(data.questionId+"<> "+data.anwerId+"  = "+ key)
-        }); 
-    })
-    */
-    /*req.body.map((data,key)=>{
-        console.log(data.questionId+"<> "+data.anwerId+"  = "+ key)
-    });
-    */
-    console.log(res+"===="+req.body);
+    console.log(" User Score is "+userScore.correctAnswer);
     res.send(userScore)
 }
 

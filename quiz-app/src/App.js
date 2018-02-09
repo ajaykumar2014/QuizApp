@@ -153,7 +153,6 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h2>React Quiz</h2>
         </div>
-        result is {this.state.result}
         {this.state.result ? this.renderResult() : this.renderQuiz()}
       </div>
     );
