@@ -3,15 +3,14 @@ import React from 'react';
 function NextButton(props) {
 
   return (
-    <div>
-      <input
-        type="button"
+    <div class="button-box">
+      <button
         name="Next"
         id='nextButton'
         value='Next'
+        className='button'
         disabled={props.answer === -1}
-        onClick={props.onAnswerSubmitted}
-      />
+        onClick={props.onAnswerSubmitted}>Next</button>
     </div>
   );
 

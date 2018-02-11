@@ -23,7 +23,7 @@ function Quiz(props) {
 
   return (
     
-      <div className="questionOptions" key={props.questionId}>
+      <div className="quiz_panel card-1" key={props.questionId}>
         <QuestionCount
           counter={props.questionId}
           total={props.questionTotal}
