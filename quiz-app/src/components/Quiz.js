@@ -13,8 +13,8 @@ function Quiz(props) {
       <AnswerOption
         key={key}
         answerContent={key}
-        answerType={index}
-        answer={props.answer}
+        answerType={index+1}
+        answer={props.answer+1}
         questionId={props.questionId}
         onAnswerSelected={props.onAnswerSelected}
       />

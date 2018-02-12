@@ -3,7 +3,7 @@ import React from 'react';
 function NextButton(props) {
 
   return (
-    <div class="button-box">
+    <div className="button-box">
       <button
         name="Next"
         id='nextButton'

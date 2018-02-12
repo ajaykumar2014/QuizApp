@@ -67,7 +67,7 @@ class App extends Component {
   handleAnswerSelected(event) {
     var selectedAnswer ={}
     selectedAnswer.questionId = this.state.questionId;
-    selectedAnswer.anwerId=event.currentTarget.value;
+    selectedAnswer.answerId=event.currentTarget.value;
     selectedAnswer = JSON.stringify(selectedAnswer)
    // console.log("selectedAnswer :"+JSON.stringify(selectedAnswer))
     
@@ -84,7 +84,7 @@ class App extends Component {
     this.setState({
         userAnswer:this.state.userAnswer.concat(this.state.selectedOption),
         answersCount: this.state.answersCount+1,
-        answer: this.state.selectedOption.anwerId
+        answer: this.state.selectedOption.answerId
     },()=>{
       console.log("Moving to Next Question No. "+this.state.questionId)
     });
