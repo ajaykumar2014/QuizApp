@@ -61,27 +61,3 @@ exports.questionAsJSON =  [
             
     }
 ]
-/*
-AnswerSheet = [
-    {
-        "id":1,
-        "answer":1
-    },
-    {
-        "id":2,
-        "answer":1
-    },
-    {
-        "id":3,
-        "answer":1
-    },
-    {
-        "id":4,
-        "answer":1
-    }
-]
-
-exports.GetAnswerSheet = function(qustionId){
-    AnswerSheet.find(data=>data.id === questionId)
-}
-*/

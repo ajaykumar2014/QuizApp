@@ -9,13 +9,20 @@ exports.getAllQuizQuestion = function(res,res){
 exports.getScore = function(req,res){
     var userScore = {};
     userScore.correctAnswer = 0;
+    var userAnswerArray = eval(req.body)
+    console.log(userAnswerArray[0].answerId+"*********************"+userAnswerArray)
     for(var i=0;i<answerSheet.AnswerSheet.length;i++){
-        for(var j=0;j<req.body.length;j++){
-            if(answerSheet.AnswerSheet[i].id == parseInt(req.body[j].questionId)
-                 && answerSheet.AnswerSheet[i].answer == parseInt(req.body[j].anwerId)){
-                userScore.correctAnswer +=1;
-                break;
-            } 
+        for(var j=i;j<userAnswerArray.length;j++){
+            if((answerSheet.AnswerSheet[i].id == userAnswerArray[j].questionId))
+              {
+                  var option = answerSheet.AnswerSheet[i];
+                  //console.log(option.answer+"Match Question id "+option.id+"User Answer is "+userAnswerArray[j].answerId);
+                  if(option.answer == userAnswerArray[j].answerId){
+                      console.log("Match answer Id"+userAnswerArray[j].answerId);
+                      userScore.correctAnswer +=1;
+                      break;
+                  }
+              }            
         }
     }
     console.log(" User Score is "+userScore.correctAnswer);
