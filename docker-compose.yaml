@@ -1,0 +1,27 @@
+--- 
+services: 
+
+  server: 
+    build: ./server
+    expose: 
+      - 7777
+    ports: 
+      - 7777:7777
+    volumes: 
+      - ./server:/home/app/quiz-app/server
+    command: "npm start"  
+
+  client: 
+    build: ./client
+    expose: 
+      - 3001
+    ports: 
+      - 3001:3000
+    volumes: 
+      - ./client/src:/home/app/quiz-app/client/src
+      - ./client/public:/home/app/quiz-app/client/public
+    links: 
+      - server  
+    command: "npm run start"  
+
+version: '3.7'

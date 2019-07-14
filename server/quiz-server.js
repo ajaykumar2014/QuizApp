@@ -4,6 +4,8 @@ var body_parser = require('body-parser')
 var quizController = require('./api/QuizController')
 var app = express()
 
+var PORT =  7777 ;
+
 app.use(function(req, res, next) {
     
   res.header("Access-Control-Allow-Origin", "*");
@@ -19,8 +21,9 @@ app.get("/quiz/questions",quizController.getAllQuizQuestion);
 app.put('/quiz/question',quizController.validateQuizAnswer);
 app.put('/quiz/score',quizController.getScore);
 
+console.log('API END POINT is '+ process.env.API_SERVER_PORT);
 
-app.listen(7777,()=>{
+app.listen(PORT,()=>{
     console.log("Quiz Server is started...")
 })
 

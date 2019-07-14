@@ -1,0 +1,13 @@
+
+
+server/node_modules/
+client/node_modules/
+
+.git
+
+.DS_Store
+
+.vscode/
+
+server/package-lock.json
+client/package-lock.json
